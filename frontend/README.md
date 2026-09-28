@@ -1,29 +1,151 @@
-# Plume - Simple Version (readable code, seekhne ke liye)
+# Vibely
 
-Ye wahi Plume app hai (design bilkul same), lekin code **beginner-friendly** tareeqe se likha gaya hai.
+Vibely is a full-stack social media web application where users can create accounts, create posts, like and comment on posts, follow other users, and manage their profiles.
 
-## Kaise chalayein
-`index.html` par double-click karein. Kuch install nahi karna. Login: `ayesha` / `password123` (ya "Fill demo login" button dabayein), ya naya account banayein.
+## Features
 
-## Ye "simple" version un advanced cheezon se bachti hai:
-- Koi `async / await`, koi Promises nahi — har function turant (synchronously) jawab deta hai.
-- Koi `data-action` / event-delegation system nahi — buttons par seedha `onclick="functionName()"` likha hai.
-- Koi module pattern (IIFE) ya "registries" nahi — sirf seedhe, globally available functions.
-- Zyadatar jagah `function` keyword (arrow functions nahi), aur `for` loops (chains ki jagah).
+* User registration and login
+* User profiles
+* Create and delete posts
+* Like posts
+* Comment on posts
+* Follow and unfollow users
+* Home feed
+* User search
+* Dark and light theme
+* MySQL database integration
+* REST API using Express.js
 
-## Folder structure
+## Technologies Used
 
+### Frontend
+
+* HTML5
+* CSS3
+* JavaScript
+
+### Backend
+
+* Node.js
+* Express.js
+* REST API
+
+### Database
+
+* MySQL
+
+## Project Structure
+
+```text
+Vibely/
+│
+├── backend/
+│   ├── db.js
+│   ├── server.js
+│   ├── package.json
+│   └── package-lock.json
+│
+├── frontend/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   ├── app.js
+│   │   └── data.js
+│   └── index.html
+│
+├── .gitignore
+└── README.md
 ```
-index.html
-css/style.css     -> design (colours, layout) - bilkul original jaisa, ismein kuch nahi badla
-js/data.js        -> "fake backend": localStorage mein data, sab functions synchronous hain
-js/app.js         -> poori screen: har page ek function hai, buttons onclick se jude hain
+
+## How to Run
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/hudakamran29/vibely.git
 ```
 
-## Kaam kaise karta hai (3 baatein)
+### 2. Open the project
 
-1. **`data.js`** aapka data sambhalta hai (users, posts, comments, likes, follows) — sab kuch browser ke `localStorage` mein. Har function seedha jawab deta hai, jaise: `var result = loginUser("ayesha", "password123");`
-2. **`app.js`** screen banata hai. Har page (Home, Profile, Explore) ek function hai jo HTML ka text banakar `innerHTML` se laga deta hai.
-3. Button dabane par (`onclick="handleLikeClick(5)"`) seedha wahi function chalta hai. Data badalne ke baad hum us page ko **dobara bana dete hain** (`renderCurrentPage()`), taake screen hamesha sahi dikhe.
+```bash
+cd vibely-app
+```
 
-Har function ke upar Roman Urdu mein comment hai ki wo kya karta hai — file khol kar upar se neeche padhte jayein.
+### 3. Install backend dependencies
+
+```bash
+cd backend
+npm install
+```
+
+### 4. Configure MySQL
+
+Create a MySQL database and update the database connection settings in:
+
+```text
+backend/db.js
+```
+
+Make sure your MySQL server is running.
+
+### 5. Start the backend
+
+```bash
+node server.js
+```
+
+The backend will run on:
+
+```text
+http://localhost:3000
+```
+
+### 6. Open the frontend
+
+Open:
+
+```text
+frontend/index.html
+```
+
+in your browser.
+
+## API
+
+The backend provides REST API endpoints for application data, including:
+
+```text
+/api/users
+/api/posts
+/api/likes
+/api/comments
+/api/follows
+/api/login
+```
+
+## Database
+
+Vibely uses MySQL to store application data such as:
+
+* Users
+* Posts
+* Likes
+* Comments
+* Follows
+
+## Future Improvements
+
+* Image upload for posts
+* Notifications
+* Real-time messaging
+* Password hashing and authentication improvements
+* Deployment of frontend, backend, and database
+* Responsive improvements for mobile devices
+
+## Author
+
+**Huda**
+
+Computer Science Student | Web Developer
+
+
