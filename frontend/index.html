@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Vibely - say something, someone's listening</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Poori app is div ke andar JavaScript se banti hai -->
+  <div id="app"></div>
+
+  <!-- Popups (jaise "Edit profile") yahan khulte hain -->
+  <div id="modal-root"></div>
+
+  <!-- Chhote "Posted" jaise messages yahan dikhte hain -->
+  <div id="toasts"></div>
+
+  <!-- Files is order mein load honi chahiye: pehle data, phir app -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
